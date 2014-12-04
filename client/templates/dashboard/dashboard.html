@@ -38,11 +38,20 @@
         {{/if}}
         {{/if}}
       {{/each}}
-      <span class="dashboard-drawer-close-btn glyphicon glyphicon-remove pull-right"></span>
+
+        <!-- Dashboard close button -->
+        <li class="pull-right dashboard-drawer-controls">
+            <button type="button" class="close dashboard-drawer-close-button">
+                <span aria-hidden="true"><i class="fa fa-times"></i></span>
+                <span class="sr-only">Close</span>
+            </button>
+        </li>
+
     </ul>
+
   </div>
 </template>
 
 <template name="dashboardWidgets">
-  {{>widget name=./name}}
+  {{>widget name=this.name}}
 </template>
